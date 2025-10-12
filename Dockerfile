@@ -1,0 +1,12 @@
+ARG BUILD_IMAGE=ghcr.io/harun-siyad/siyad.ch:build-latest
+FROM --platform=$BUILDPLATFORM ${BUILD_IMAGE} AS build
+
+FROM nginx:1.29.2-alpine3.22
+
+ARG BUILD_IMAGE
+
+WORKDIR /usr/share/nginx/html
+COPY --from=build /output ./
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

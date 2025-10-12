@@ -1,0 +1,13 @@
+services:
+  siyad.ch:
+    image: ghcr.io/harun-siyad/siyad.ch:latest
+    container_name: siyad.ch
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    networks:
+      - siyad.ch
+
+networks:
+  siyad.ch:
+    name: siyad.ch

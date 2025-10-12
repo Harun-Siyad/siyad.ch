@@ -1,0 +1,26 @@
+{
+	"name": "siyad.ch",
+	"version": "1.0.0",
+	"packageManager": "pnpm@10.15.0",
+	"type": "module",
+	"scripts": {
+		"prepare": "svelte-kit sync",
+		"dev": "svelte-kit sync && vite dev",
+		"build": "svelte-kit sync && vite build",
+		"preview": "svelte-kit sync && vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"dependencies": {
+		"svelte": "^5.42.3"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.48.2",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@types/node": "^24.9.1",
+		"svelte-check": "^4.3.3",
+		"typescript": "^5.9.3",
+		"vite": "^7.1.12"
+	}
+}
