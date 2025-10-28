@@ -1,13 +1,11 @@
+## [1.0.1](https://github.com/Harun-Siyad/siyad.ch/compare/v1.0.0...v1.0.1) (2025-10-28)
+
+### Bug Fixes
+
+* **changelog:** fix changelogs ([25cc14d](https://github.com/Harun-Siyad/siyad.ch/commit/25cc14d63d98b5b9507fdb114162ea95d7631718))
+
 ## 1.0.0 (2025-10-28)
 
 ### ⚠ BREAKING CHANGES
 
-* **init:** create sulej.ch
-
-### Features
-
-* **init:** create sulej.ch ([40c353f](https://github.com/Harun-Siyad/siyad.ch/commit/40c353ff4efe2ed26f4462ecef7dd08a23437474))
-
-### Bug Fixes
-
-* **ui:** top-align layout and restyle footer version link ([#20](https://github.com/Harun-Siyad/siyad.ch/issues/20)) ([6a71380](https://github.com/Harun-Siyad/siyad.ch/commit/6a71380297ad9047cb79c7417e513a11bc57e6ad))
+* **init:** rebrand to siyad.cg
