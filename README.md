@@ -1,3 +1,3 @@
-# sulej.ch
+# siyad.ch
 
-Welcome to the official repository of **[sulej.ch](https://sulej.ch/)**, my personal website.
+Welcome to the official repository of **[siyad.ch](https://siyad.ch/)**, my personal website.

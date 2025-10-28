@@ -1,4 +1,4 @@
-ARG BUILD_IMAGE=ghcr.io/arlind-dev/sulej.ch:build-latest
+ARG BUILD_IMAGE=ghcr.io/harun-siyad/siyad.ch:build-latest
 FROM --platform=$BUILDPLATFORM ${BUILD_IMAGE} AS build
 
 FROM nginx:1.29.2-alpine3.22

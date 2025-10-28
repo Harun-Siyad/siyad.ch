@@ -7,11 +7,11 @@ export type SiteConfig = {
 };
 
 export const site: SiteConfig = {
-  ownerName: "Arlind Sulejmani",
-  contactEmail: "arlind@sulej.ch",
-  domain: "sulej.ch",
-  siteTitle: "sulej.ch",
-  githubRepo: "https://github.com/Arlind-dev/sulej.ch"
+  ownerName: "Harun Siyad",
+  contactEmail: "harun@siyad.ch",
+  domain: "siyad.ch",
+  siteTitle: "siyad.ch",
+  githubRepo: "https://github.com/Harun-Siyad/siyad.ch"
 };
 
 export const currentYear = new Date().getFullYear();

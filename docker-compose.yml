@@ -1,13 +1,13 @@
 services:
-  sulej.ch:
-    image: ghcr.io/arlind-dev/sulej.ch:latest
-    container_name: sulej.ch
+  siyad.ch:
+    image: ghcr.io/harun-siyad/siyad.ch:latest
+    container_name: siyad.ch
     restart: unless-stopped
     ports:
       - 8080:80
     networks:
-      - sulej.ch
+      - siyad.ch
 
 networks:
-  sulej.ch:
-    name: sulej.ch
+  siyad.ch:
+    name: siyad.ch

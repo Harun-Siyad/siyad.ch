@@ -31,20 +31,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Import GPG key and configure signing
-        uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-          git_config_global: true
-
-      - name: Configure git user
-        run: |
-          git config --global user.name "Arlind-dev"
-          git config --global user.email "arlind@sulej.ch"
-
       - name: Run semantic-release
         id: semantic
         uses: cycjimmy/semantic-release-action@v5
@@ -58,10 +44,6 @@ jobs:
             conventional-changelog-conventionalcommits
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_AUTHOR_NAME: Arlind-dev
-          GIT_COMMITTER_NAME: Arlind-dev
-          GIT_AUTHOR_EMAIL: arlind@sulej.ch
-          GIT_COMMITTER_EMAIL: arlind@sulej.ch
 
   docker-prod:
     runs-on: ubuntu-24.04
@@ -92,8 +74,6 @@ jobs:
         run: |
           echo "owner_lc=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
           echo "build_date=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
-
-      
 
       - name: Build and push build-stage image
         uses: docker/build-push-action@v6
@@ -161,8 +141,6 @@ jobs:
           echo "sanitized_branch=$SANITIZED_BRANCH" >> "$GITHUB_OUTPUT"
           echo "sha_short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
           echo "build_date=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
-
-      
 
       - name: Build and push build-stage image
         uses: docker/build-push-action@v6
